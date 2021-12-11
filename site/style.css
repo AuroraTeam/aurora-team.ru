@@ -19,6 +19,7 @@ body {
   flex-direction: column;
   background: url("/bg.png") fixed no-repeat, #111 url("/ny_bg.png") fixed;
   /* background: #1a1a1a url("/bg.png") fixed no-repeat; */
+  background-size: auto, 100%;
   font-family: "Comfortaa", sans-serif;
   color: #fff;
 }
