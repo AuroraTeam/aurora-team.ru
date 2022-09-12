@@ -17,10 +17,9 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* background: url("/bg.png") fixed no-repeat, #111 url("/ny_bg.png") fixed; */
-  background: #1a1a1a url("/bg.png") fixed no-repeat;
-  /* background-size: auto, 100%; */
-  background-size: auto;
+  /* background: #111 url("/ny_bg.png") fixed;
+  background-size: 100%; */
+  background: #1a1a1a;
   font-family: "Comfortaa", sans-serif;
   color: #fff;
 }
@@ -96,6 +95,7 @@ h2 {
 .projects {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 3rem;
 }
 
 .project {
