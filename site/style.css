@@ -17,9 +17,9 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  /* background: #111 url("/ny_bg.png") fixed;
-  background-size: 100%; */
-  background: #1a1a1a;
+  background: #111 url("/ny_bg.png") fixed;
+  background-size: 100%;
+  /* background: #1a1a1a; */
   font-family: "Comfortaa", sans-serif;
   color: #fff;
 }
