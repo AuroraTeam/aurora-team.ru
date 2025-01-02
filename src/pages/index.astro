@@ -1,0 +1,205 @@
+---
+import Layout from "../layouts/Layout.astro";
+// import LogoWide from "../assets/logo_wide.png";
+import glacier from "../assets/glacier.png";
+import apollo from "../assets/apollo.svg";
+---
+
+<Layout>
+  <h1 class="text-8xl text-center my-16">Aurora Team</h1>
+  <h2 id="projects" class="text-6xl text-center my-16">Наши проекты</h2>
+
+  <div class="project aurora">
+    <div class="container">
+      <div class="image">
+        <img
+          src="https://aurora-launcher.ru/launcher.png"
+          alt="Aurora Launcher"
+        />
+      </div>
+      <div class="info">
+        <div class="title">Aurora Launcher</div>
+        <p>
+          Лаунчер с удобной кастомизацией дизайна за счёт использования
+          веб&#8209;технологий
+        </p>
+        <a target="_blank" rel="noopener" href="https://aurora-launcher.ru/"
+          >Перейти на сайт</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="project">
+    <div class="container flex-row-reverse">
+      <div class="image">
+        <img src={glacier.src} alt="Glacier" />
+      </div>
+      <div class="info">
+        <div class="title">Glacier</div>
+        <p>
+          Фреймворк, позволяющий создавать кроссплатформенные настольные
+          приложения с использованием Node.js и webview
+        </p>
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://github.com/AuroraTeam/Glacier">GitHub репозиторий</a
+        >
+      </div>
+    </div>
+  </div>
+  <div class="project bg-white text-black">
+    <div class="container">
+      <div class="image">
+        <img class="w-1/2 m-auto" src={apollo.src} alt="Apollo" />
+      </div>
+      <div class="info">
+        <div class="title">Apollo</div>
+        <p>To be announced</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <h2 id="team" class="text-6xl text-center my-16">Наша команда</h2>
+
+  <div class="team">
+    <div class="container">
+      <div class="member">
+        <img
+          src="https://avatars.githubusercontent.com/u/13483132?v=4"
+          alt="JoCat"
+        />
+        <div class="info">
+          <div class="name">JoCat</div>
+        </div>
+      </div>
+      <div class="member">
+        <img
+          src="https://avatars.githubusercontent.com/u/65069020?v=4"
+          alt="kostya-main"
+        />
+        <div class="info">
+          <div class="name">kostya-main</div>
+        </div>
+      </div>
+      <div class="member">
+        <img
+          src="https://avatars.githubusercontent.com/u/88724799?v=4"
+          alt="Ftrless"
+        />
+        <div class="info">
+          <div class="name">Ftrless</div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+</Layout>
+
+<style>
+  .project {
+    @apply py-8;
+  }
+
+  .project > .container {
+    @apply flex gap-8;
+  }
+
+  .aurora {
+    background: linear-gradient(135deg, #7f47dd 0%, #2575fc 100%);
+  }
+
+  .project > .container > div {
+    max-width: 50%;
+    flex-grow: 1;
+  }
+
+  .project .image {
+    padding: 0 4rem;
+  }
+
+  .project .image img {
+    border-radius: 8px;
+  }
+
+  .project .info {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  .project .title {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .project p {
+    width: 80%;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .project a {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border-radius: 24px;
+    border: 2px solid #fff;
+    display: inline-block;
+  }
+
+  .project a:hover {
+    background: #fff;
+    color: #000;
+    @apply shadow-xl -translate-y-1 duration-100;
+  }
+
+  /* .team > .container {
+    @apply flex gap-8 flex-wrap justify-center mb-16;
+  }
+
+  .member {
+    @apply flex flex-col items-center gap-4 bg-neutral-800 p-8 rounded-3xl w-1/6;
+  }
+
+  .member .info {
+    @apply text-2xl;
+  }
+
+  .member img {
+    border-radius: 50%;
+  } */
+
+  @media (max-width: 767px) {
+    h1 {
+      font-size: 4rem;
+      @apply my-8;
+    }
+
+    h2 {
+      font-size: 2rem;
+      @apply my-8;
+    }
+
+    .project > .container {
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .project > .container > div {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 1023px) {
+    .project .image {
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  .project .title {
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  @media (max-width: 1279px) {
+    .project p {
+      width: 100%;
+    }
+  }
+</style>

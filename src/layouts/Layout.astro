@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Aurora Team</title>
+    <meta name="description" content="Aurora Team" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="icon" sizes="any" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#222222" />
+    <meta property="og:image" content="/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <img src="/logo.svg" alt="Logo" />
+          <span>urora Team</span>
+        </div>
+        <nav>
+          <a href="#projects">Проекты</a>
+          <a target="_blank" rel="noopener" href="https://blog.aurora-team.ru/"
+            >Блог</a
+          >
+        </nav>
+      </div>
+    </header>
+    <slot />
+    <footer class="container">
+      <img src="/logo.svg" alt="Logo" />
+      <div class="links">
+        <a href="https://github.com/AuroraTeam" target="_blank" rel="noopener"
+          >GitHub</a
+        >
+        <a href="https://discord.gg/2NvYTcv" target="_blank" rel="noopener"
+          >Discord</a
+        >
+        <a href="https://t.me/aurora_team_tg" target="_blank" rel="noopener"
+          >Telegram</a
+        >
+        <a
+          href="https://www.youtube.com/@AuroraTeamRu"
+          target="_blank"
+          rel="noopener">YouTube</a
+        >
+        <p>Aurora Team &copy; 2020-{new Date().getFullYear()}</p>
+      </div>
+      <div class="copyrights">
+        by
+        <a href="https://jocat.ru" target="_blank" rel="noopener">JCat</a>
+        as<br />
+        <a href="https://aurora-team.ru" target="_blank" rel="noopener"
+          >Aurora Team</a
+        >
+      </div>
+    </footer>
+    <!-- Yandex.Metrika counter -->
+    <script is:inline type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(
+        window,
+        document,
+        "script",
+        "https://mc.yandex.ru/metrika/tag.js",
+        "ym"
+      );
+
+      ym(68187730, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+      });
+    </script>
+    <noscript
+      ><div>
+        <img
+          src="https://mc.yandex.ru/watch/68187730"
+          style="position: absolute; left: -9999px"
+          alt=""
+        />
+      </div></noscript
+    >
+    <!-- /Yandex.Metrika counter -->
+    <script is:inline src="https://jocat.ru/js/snow.min.js"></script>
+  </body>
+</html>
+
+<style>
+  :root {
+    --blue: #2575fc;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #1a1a1a;
+    color: #fff;
+    font-family: "Comfortaa", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  a:hover {
+    color: var(--blue);
+  }
+
+  header {
+    padding: 10px 0;
+  }
+
+  header .container,
+  header nav {
+    display: flex;
+    align-items: center;
+  }
+
+  header nav {
+    margin-left: auto;
+    gap: 12px;
+  }
+
+  header .logo {
+    display: flex;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 22px;
+  }
+
+  header .logo img {
+    height: 50px;
+  }
+
+  header .logo span {
+    margin-left: -8px;
+  }
+
+  @media (max-width: 640px) {
+    header .logo span {
+      display: none;
+    }
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @apply py-4;
+  }
+
+  footer img {
+    height: 50px;
+  }
+
+  footer .links {
+    margin-left: 20px;
+    margin-right: auto;
+  }
+  footer .links a {
+    margin-right: 10px;
+  }
+  footer .links p {
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 575px) {
+    footer .copyrights {
+      display: none;
+    }
+  }
+</style>
